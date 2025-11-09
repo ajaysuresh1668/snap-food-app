@@ -29,13 +29,19 @@ import coffee from "@/assets/food/coffee.jpg";
 import chai from "@/assets/food/chai.jpg";
 import mangoLassi from "@/assets/food/mango-lassi.jpg";
 import gulabJamun from "@/assets/food/gulab-jamun.jpg";
+import iceCreamSvg from "@/assets/food/ice-cream.svg";
+import brownieSvg from "@/assets/food/brownie.svg";
+import kheerSvg from "@/assets/food/kheer.svg";
+import orangeJuice from "@/assets/food/orange-juice.svg";
+import appleJuice from "@/assets/food/apple-juice.svg";
+import pineappleJuice from "@/assets/food/pineapple-juice.svg";
 import pasta from "@/assets/food/pasta.jpg";
 import noodles from "@/assets/food/noodles.jpg";
 
 export interface FoodItem {
   id: string;
   name: string;
-  category: "veg" | "non-veg" | "snacks" | "combo" | "offers" | "beverages" | "desserts";
+  category: "veg" | "non-veg" | "snacks" | "combo" | "offers" | "beverages" | "desserts" | "juices";
   price: number;
   image: string;
   available: boolean;
@@ -118,9 +124,15 @@ export const foodItems: FoodItem[] = [
 
   // Desserts
   { id: "d1", name: "Gulab Jamun", category: "desserts", price: 30, image: gulabJamun, available: true, description: "Sweet milk solid balls" },
-  { id: "d2", name: "Ice Cream", category: "desserts", price: 35, image: gulabJamun, available: true, description: "Vanilla/Chocolate/Strawberry" },
-  { id: "d3", name: "Brownie", category: "desserts", price: 40, image: gulabJamun, available: true, description: "Chocolate brownie with ice cream" },
-  { id: "d4", name: "Kheer", category: "desserts", price: 30, image: gulabJamun, available: true, description: "Rice pudding dessert" },
+  { id: "d2", name: "Ice Cream", category: "desserts", price: 35, image: iceCreamSvg, available: true, description: "Vanilla / Chocolate / Strawberry" },
+  { id: "d3", name: "Brownie", category: "desserts", price: 40, image: brownieSvg, available: true, description: "Chocolate brownie with scoop" },
+  { id: "d4", name: "Kheer", category: "desserts", price: 30, image: kheerSvg, available: true, description: "Rice pudding with nuts" },
+
+  // Juices (new category)
+  { id: "j1", name: "Fresh Orange Juice", category: "juices", price: 45, image: orangeJuice, available: true, description: "Cold pressed orange juice" },
+  { id: "j2", name: "Apple Juice", category: "juices", price: 45, image: appleJuice, available: true, description: "Fresh apple juice" },
+  { id: "j3", name: "Pineapple Juice", category: "juices", price: 50, image: pineappleJuice, available: true, description: "Tropical pineapple juice" },
+  { id: "j4", name: "Mixed Fruit Juice", category: "juices", price: 60, image: mangoLassi, available: true, description: "Blend of seasonal fruits" },
 
   // Offers
   { id: "o1", name: "Student Special Lunch", category: "offers", price: 50, originalPrice: 70, image: thali, available: true, description: "Affordable full meal", isOffer: true },
