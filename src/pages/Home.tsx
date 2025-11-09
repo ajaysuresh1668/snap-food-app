@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { CategoryCard } from "@/components/CategoryCard";
 import { useNavigate } from "react-router-dom";
-import { Leaf, Drumstick, Cookie, Utensils, Sparkles, ShoppingBag } from "lucide-react";
+import { Leaf, Drumstick, Cookie, Utensils, Sparkles, ShoppingBag, Coffee, IceCream } from "lucide-react";
 import { useCartStore } from "@/lib/cartStore";
 
 const Home = () => {
@@ -13,7 +13,9 @@ const Home = () => {
     { title: "Non-Veg", icon: Drumstick, color: "bg-destructive", category: "non-veg" },
     { title: "Snacks", icon: Cookie, color: "bg-warning", category: "snacks" },
     { title: "Combo", icon: Utensils, color: "bg-info", category: "combo" },
-    { title: "Offers", icon: Sparkles, color: "bg-accent", category: "offers" },
+    { title: "Beverages", icon: Coffee, color: "bg-primary", category: "beverages" },
+    { title: "Desserts", icon: IceCream, color: "bg-accent", category: "desserts" },
+    { title: "Offers", icon: Sparkles, color: "gradient-primary", category: "offers" },
   ];
 
   return (
@@ -72,7 +74,7 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
             Browse by Category
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-6">
             {categories.map((category, index) => (
               <div key={category.category} style={{ animationDelay: `${index * 0.1}s` }} className="animate-fade-in-up">
                 <CategoryCard {...category} />

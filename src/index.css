@@ -107,7 +107,21 @@ All colors MUST be HSL.
   }
   
   .hover-lift {
-    @apply transition-smooth hover:-translate-y-1 hover:shadow-hover;
+    @apply transition-smooth hover:-translate-y-2 hover:shadow-hover;
+  }
+  
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 

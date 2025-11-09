@@ -78,16 +78,18 @@ const Menu = () => {
       </header>
 
       {/* Categories Tabs */}
-      <div className="sticky top-[73px] z-40 bg-card border-b">
-        <div className="container mx-auto px-4 py-4">
+      <div className="sticky top-[73px] z-40 bg-card border-b shadow-sm">
+        <div className="container mx-auto px-4 py-3">
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
-            <TabsList className="w-full grid grid-cols-3 lg:grid-cols-6 h-auto">
+            <TabsList className="w-full grid grid-cols-4 lg:grid-cols-8 h-auto gap-1 bg-muted/50 p-1">
               <TabsTrigger value="all" className="text-xs md:text-sm">All</TabsTrigger>
-              <TabsTrigger value="veg" className="text-xs md:text-sm">Veg 🌿</TabsTrigger>
-              <TabsTrigger value="non-veg" className="text-xs md:text-sm">Non-Veg 🍗</TabsTrigger>
-              <TabsTrigger value="snacks" className="text-xs md:text-sm">Snacks 🍿</TabsTrigger>
-              <TabsTrigger value="combo" className="text-xs md:text-sm">Combo 🍱</TabsTrigger>
-              <TabsTrigger value="offers" className="text-xs md:text-sm">Offers ✨</TabsTrigger>
+              <TabsTrigger value="veg" className="text-xs md:text-sm">🌿 Veg</TabsTrigger>
+              <TabsTrigger value="non-veg" className="text-xs md:text-sm">🍗 Non-Veg</TabsTrigger>
+              <TabsTrigger value="snacks" className="text-xs md:text-sm">🍿 Snacks</TabsTrigger>
+              <TabsTrigger value="combo" className="text-xs md:text-sm">🍱 Combo</TabsTrigger>
+              <TabsTrigger value="beverages" className="text-xs md:text-sm">☕ Drinks</TabsTrigger>
+              <TabsTrigger value="desserts" className="text-xs md:text-sm">🍰 Desserts</TabsTrigger>
+              <TabsTrigger value="offers" className="text-xs md:text-sm">✨ Offers</TabsTrigger>
             </TabsList>
           </Tabs>
         </div>
